@@ -1,11 +1,3 @@
-Ah, excellent catch! You hit the nail on the head. The issue is exactly that: **nested backticks.** Because I wrapped the *entire* document inside a master Markdown block (` ```markdown `), the moment the parser hit the first internal code block for the Git commands (` ```bash `), it thought the main document was finished. That caused the code block to close prematurely and completely broke the formatting for the rest of the text.
-
-I will provide the document again, but this time I will **not** wrap the entire thing in a master code block. I will just format it directly in our chat. This will allow the internal code blocks (like the Bash commands and Gherkin syntax) to render perfectly. You can simply highlight and copy the text below directly into your file.
-
-Here is the clean, correctly formatted document:
-
----
-
 # Welcome to BUCCONOMICS! 
 
 We're thrilled that you'd like to help build BUCCONOMICS — an open-source infrastructure to empower local communities with decentralized financial tools.
